@@ -8,6 +8,7 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /login/
 
+Allow: /product.html
 Allow: /
 
 Sitemap: https://mastercareservices.in/sitemap.xml
