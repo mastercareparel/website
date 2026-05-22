@@ -1,6 +1,7 @@
 User-agent: *
 
 Allow: /api/product/
+Allow: /reviews/
 Allow: /product.html
 Allow: /
 
