@@ -7,7 +7,7 @@ const cors = require("cors");
 const multer = require("multer");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
@@ -272,7 +272,11 @@ app.get("/api/products", (req, res) => {
 
     if (err) {
       console.log("Query Error:", err);
-      return res.status(500).json({ error: "Database query failed" });
+
+      return res.status(500).json({
+        error: err.message,
+        code: err.code
+      });
     }
 
     res.json(result);
