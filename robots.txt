@@ -1,5 +1,9 @@
-User-agent: *
+User-agent: Googlebot
+Allow: /product.html
+Allow: /product.html?product=
+Allow: /
 
+User-agent: *
 Allow: /product.html
 Allow: /product.html?product=
 Allow: /
