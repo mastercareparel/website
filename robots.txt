@@ -1,5 +1,9 @@
 User-agent: *
 
+Allow: /product.html
+Allow: /product.html?product=
+Allow: /
+
 Disallow: /cart/
 Disallow: /checkout/
 Disallow: /thankyou/
@@ -7,8 +11,5 @@ Disallow: /success/
 Disallow: /admin/
 Disallow: /api/
 Disallow: /login/
-
-Allow: /product.html
-Allow: /
 
 Sitemap: https://mastercareservices.in/sitemap.xml
