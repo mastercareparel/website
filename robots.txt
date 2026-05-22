@@ -7,8 +7,6 @@ Disallow: /success/
 Disallow: /admin/
 Disallow: /api/
 Disallow: /login/
-Disallow: /register/
-Disallow: /*?*
 
 Allow: /
 
