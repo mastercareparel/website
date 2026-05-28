@@ -664,33 +664,33 @@ color:black;
         grid-template-columns: 1fr;
     }
 }
-
-/* Mobile Navbar Fix */
+/* PERFECT MOBILE NAVBAR FIX */
 @media (max-width:768px){
 
   .navbar{
     display:flex;
     flex-direction:column;
     align-items:flex-start;
-    padding:15px 20px;
+    padding:15px;
     gap:12px;
   }
 
   .logo{
-    font-size:24px;
+    font-size:22px;
     font-weight:700;
   }
 
-  .top-row{
+  .search-cart{
     width:100%;
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    gap:12px;
   }
 
   .search-box{
-    width:100%;
+    flex:1;
     margin:0;
+    width:auto;
   }
 
   .search-box input{
@@ -698,15 +698,20 @@ color:black;
     font-size:14px;
   }
 
-  .nav-icons{
-    width:100%;
+  .cart-icon{
+    min-width:50px;
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    margin-top:8px;
+    justify-content:center;
+    font-size:22px;
   }
 
-  .cart-icon{
-    font-size:22px;
+  .nav-icons{
+    width:auto;
+    margin:0;
+  }
+
+  .package-icon{
+    margin-top:8px;
   }
 }
