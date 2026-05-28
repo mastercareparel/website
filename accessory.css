@@ -701,55 +701,75 @@ color:black;
     }
 }
 
-/* MOBILE NAVBAR FIX ONLY */
-@media screen and (max-width: 768px){
+@media screen and (max-width:768px){
 
   .navbar{
-    padding: 15px 16px !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 12px !important;
+    padding:16px 20px !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:15px !important;
   }
 
   .logo{
-    font-size: 22px !important;
-    text-align: center !important;
+    font-size:26px !important;
+    font-weight:bold !important;
   }
 
-  /* Menu hide on mobile */
+  /* Hide desktop menu */
   .navbar ul{
-    display: none !important;
+    display:none !important;
   }
 
-  /* Search + cart same line */
+  /* search + cart in one row */
   .nav-icons{
-    display: flex !important;
-    align-items: center !important;
-    width: 100% !important;
-    gap: 10px !important;
+    width:100% !important;
+    display:flex !important;
+    align-items:center !important;
+    gap:12px !important;
   }
 
   .nav-search{
-    flex: 1 !important;
+    flex:1 !important;
   }
 
   .nav-search input{
-    width: 100% !important;
-    height: 48px !important;
-    font-size: 16px !important;
+    width:100% !important;
+    height:52px !important;
+    border-radius:30px !important;
+    font-size:16px !important;
+    padding:0 18px !important;
   }
 
   .cart-icon{
-    font-size: 20px !important;
-    white-space: nowrap !important;
+    font-size:22px !important;
+    display:flex !important;
+    align-items:center !important;
+    white-space:nowrap !important;
   }
 
-  /* Hide box icon in mobile */
+  /* hide box icon on mobile */
   .orders-icon{
-    display: none !important;
+    display:none !important;
+  }
+
+  /* hero section mobile */
+  .hero{
+    height:500px !important;
+    padding:30px !important;
+    align-items:center !important;
+  }
+
+  .hero-content h1{
+    font-size:56px !important;
+    line-height:1 !important;
+  }
+
+  .hero-content p{
+    font-size:18px !important;
   }
 
   body{
-    padding-top: 150px !important;
+    padding-top:160px !important;
   }
 }
