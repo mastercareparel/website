@@ -694,3 +694,33 @@ color:black;
         grid-template-columns: 1fr;
     }
 }
+
+@media(max-width:768px){
+
+  .nav-icons{
+    display:flex !important;
+    align-items:center !important;
+    width:100% !important;
+    gap:10px !important;
+  }
+
+  .nav-search{
+    flex:1 !important;
+  }
+
+  .nav-search input{
+    width:100% !important;
+  }
+
+  .cart-icon{
+    display:flex !important;
+    align-items:center !important;
+    font-size:24px !important;
+    margin-left:8px !important;
+  }
+
+  .orders-icon{
+    display:none !important;
+  }
+
+}
