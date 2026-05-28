@@ -716,9 +716,18 @@ color:black;
     font-weight:bold !important;
   }
 
-  /* Hide desktop menu */
   .navbar ul{
-    display:none !important;
+    display:flex !important;
+    flex-wrap:wrap !important;
+    justify-content:center !important;
+    gap:10px !important;
+    width:100% !important;
+    padding:0 !important;
+}
+
+  .navbar ul li a{
+      font-size:13px !important;
+      padding:6px 10px !important;
   }
 
   /* search + cart in one row */
