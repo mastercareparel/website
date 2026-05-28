@@ -713,11 +713,12 @@ color:black;
   }
 
   .cart-icon{
-    display:flex !important;
-    align-items:center !important;
-    font-size:24px !important;
-    margin-left:8px !important;
-  }
+  display:flex !important;
+  align-items:center !important;
+  font-size:24px !important;
+  margin-left:8px !important;
+  white-space: nowrap !important;
+}
 
   .orders-icon{
     display:none !important;
