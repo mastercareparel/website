@@ -388,18 +388,31 @@ grid-template-columns:1fr;
   .navbar{
     display:flex;
     flex-direction:column;
-    align-items:flex-start;
-    padding:15px 20px;
-    gap:12px;
-  }
-
-  .navbar ul{
-    display:none;
+    align-items:center;
+    padding:15px 18px;
+    gap:14px;
   }
 
   .logo{
     font-size:22px;
-    margin-bottom:5px;
+    text-align:center;
+  }
+
+  .navbar ul{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:14px;
+    width:100%;
+    padding:0;
+  }
+
+  .navbar ul li{
+    list-style:none;
+  }
+
+  .navbar ul li a{
+    font-size:14px;
   }
 
   .nav-icons{
@@ -414,7 +427,7 @@ grid-template-columns:1fr;
   }
 
   .nav-search input{
-    width:100% !important;
+    width:100%;
   }
 
   .cart-icon{
@@ -423,18 +436,11 @@ grid-template-columns:1fr;
   }
 
   .orders-icon{
-    font-size:26px;
-    margin-top:5px;
-  }
-
-  .shop{
-    padding:60px 20px;
-  }
-
-  .footer-container{
-    grid-template-columns:1fr 1fr;
+    display:none;
   }
 }
+
+
 
 @media(max-width:500px){
 
