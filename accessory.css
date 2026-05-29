@@ -713,14 +713,28 @@ color:black;
     }
 }
 
+/* ACCESSORY MOBILE NAVBAR */
+
+.mobile-menu-btn{
+  display:none;
+}
+
 @media(max-width:768px){
 
   .navbar{
-    padding:18px 20px;
+    padding:18px 20px !important;
     display:flex;
     flex-direction:column;
+    background:#fff;
+    gap:16px;
+  }
+
+  /* top row */
+  .navbar-top{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
     align-items:center;
-    gap:14px;
   }
 
   .logo{
@@ -728,31 +742,51 @@ color:black;
     font-weight:800;
   }
 
-  /* hide menu icon */
-  .mobile-menu-btn{
+  /* desktop menu hide */
+  .navbar ul{
     display:none !important;
   }
 
-  .navbar ul{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:16px;
+  /* hamburger show */
+  .mobile-menu-btn{
+    display:block !important;
+    font-size:42px;
+    cursor:pointer;
+  }
+
+  /* popup menu */
+  .nav-menu{
+    display:none;
     width:100%;
+    background:#fff;
+    border-radius:28px;
+    padding:30px;
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .nav-menu.active{
+    display:flex !important;
+  }
+
+  .nav-menu li{
     list-style:none;
   }
 
-  .navbar ul li a{
-    font-size:15px;
+  .nav-menu li a{
     text-decoration:none;
+    color:#111;
+    font-size:22px;
+    font-weight:600;
   }
 
+  /* search + cart row */
   .nav-icons{
+    display:flex !important;
     width:100%;
-    display:flex;
     align-items:center;
-    justify-content:space-between;
-    gap:12px;
+    gap:14px;
   }
 
   .nav-search{
@@ -761,25 +795,24 @@ color:black;
 
   .nav-search input{
     width:100%;
-    height:54px;
+    height:58px;
     border-radius:35px;
-    padding:0 20px;
-    font-size:16px;
+    padding:0 22px;
+    font-size:17px;
   }
 
   .cart-icon{
-    font-size:22px;
+    font-size:28px;
+    color:#111;
     text-decoration:none;
-    color:black;
-    white-space:nowrap;
   }
 
-  /* phone me box hide */
   .orders-icon{
-    display:none;
+    display:flex !important;
+    font-size:28px;
   }
 
   body{
-    padding-top:180px;
+    padding-top:150px;
   }
 }
