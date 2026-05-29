@@ -1276,8 +1276,6 @@ grid-template-columns:1fr;
   color:rgba(255,255,255,0.75);
 }
 
-
-
 @media(max-width:900px){
 
   .navbar{
@@ -3385,58 +3383,86 @@ transform:translateX(-50%);
     }
 }
 
-/* ==========================
-   MOBILE NAVBAR FIX
-========================== */
+.mobile-menu-btn{
+  display:none;
+}
 
 @media (max-width:768px){
 
   .navbar{
-    padding:14px 15px;
-    flex-direction:column;
-    gap:10px;
+    padding:16px 20px;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
   }
 
   .logo{
     font-size:24px;
-    text-align:center;
   }
 
-  /* SHOW MENU AGAIN */
-  .navbar ul{
-    display:flex !important;
-    overflow-x:auto;
-    white-space:nowrap;
-    width:100%;
-    justify-content:flex-start;
-    gap:18px;
-    padding-bottom:6px;
-
-    scrollbar-width:none;
+  /* hamburger */
+  .mobile-menu-btn{
+    display:block;
+    font-size:34px;
+    cursor:pointer;
+    z-index:1001;
   }
 
-  .navbar ul::-webkit-scrollbar{
+  .nav-menu{
+    position:fixed;
+    top:90px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:88%;
+    background:#fff;
+    border-radius:35px;
+    padding:35px 30px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,0.10);
+
     display:none;
+    flex-direction:column;
+    gap:38px;
+
+    z-index:1000;
+    }
+  
+    .nav-menu.active{
+    display:flex !important;
   }
 
-  .navbar ul li{
-    flex:0 0 auto;
+  .nav-menu li{
+    list-style:none;
   }
 
-  .navbar ul li a{
-    font-size:15px;
+  .nav-menu li a{
+    font-size:22px;
+    font-weight:600;
+    color:#111;
+    text-decoration:none;
   }
 
   .nav-icons{
-    margin-top:5px;
+    display:none;
   }
 
-  .hero-content h1{
-    font-size:58px;
-    line-height:1.08;
+  /* accessory search */
+  .nav-search{
+    width:100%;
+    margin-top:10px;
+  }
+
+  .nav-search input{
+    width:100%;
+    padding:14px 18px;
+    border-radius:30px;
+    border:1px solid #ddd;
   }
 
   .hero-section{
-    padding-top:180px;
+    padding-top:120px;
   }
 }
+

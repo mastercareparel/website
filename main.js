@@ -75,3 +75,4 @@ pickupFaq.forEach(button => {
 
     });
 });
+

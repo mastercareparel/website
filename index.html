@@ -38,7 +38,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <link rel="stylesheet" href="style.css">
 </head>
-
+<script>
+function toggleMenu() {
+  document
+    .querySelector(".nav-menu")
+    .classList.toggle("active");
+}
+</script>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPWDCWKL"
@@ -47,8 +53,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar">
 
   <div class="logo">MASTERCARE</div>
-
-  <ul>
+    <div class="mobile-menu-btn" onclick="toggleMenu()">
+       ☰
+    </div>
+  <ul class="nav-menu">
     <li><a href="index.html" class="active">Home</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="About.html">About</a></li>
