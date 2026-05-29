@@ -3469,3 +3469,34 @@ transform:translateX(-50%);
     padding-top:120px;
   }
 }
+
+@media(max-width:768px){
+
+  .about-hero-new{
+    padding: 0 20px;
+    margin-top: 10px;
+    min-height: auto;
+  }
+
+  .about-left{
+    padding: 30px 10px;
+  }
+
+  .about-left h1{
+    font-size: 58px;
+    line-height: 1.05;
+  }
+
+  .about-left p{
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 100%;
+  }
+
+  .about-right img{
+    width:100%;
+    height:auto;
+    border-radius:22px;
+  }
+
+}
