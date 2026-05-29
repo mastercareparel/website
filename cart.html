@@ -79,6 +79,35 @@ h1{
     cursor:pointer;
 }
 
+.qty-box{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-top:12px;
+}
+
+.qty-btn{
+    width:35px;
+    height:35px;
+    border:1px solid #ddd;
+    background:white;
+    border-radius:6px;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.qty-btn:hover{
+    background:#f0f0f0;
+}
+
+.qty-number{
+    font-size:18px;
+    font-weight:600;
+    min-width:20px;
+    text-align:center;
+}
+
 .remove-btn{
     margin-left:15px;
     border:none;
@@ -207,9 +236,21 @@ ${item.name}
 
 <div class="qty-box">
 
+<button onclick="updateQty(${item.id}, -1)">
+-</button>
+
 <span>
 Qty: ${item.quantity}
 </span>
+
+<button onclick="updateQty(${item.id}, 1)">
++
+</button>
+
+<button class="remove-btn"
+onclick="removeItem(${item.id})">
+Delete
+</button>
 
 </div>
 
@@ -235,6 +276,51 @@ document.getElementById("cart-total")
 }
 
 loadCart();
+
+function updateQty(itemId, change){
+
+fetch("/api/update-cart",{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({
+itemId:itemId,
+change:change
+})
+})
+.then(res=>res.json())
+.then(data=>{
+
+if(data.success){
+loadCart();
+}
+
+});
+
+}
+
+function removeItem(itemId){
+
+fetch("/api/remove-cart-item",{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({
+itemId:itemId
+})
+})
+.then(res=>res.json())
+.then(data=>{
+
+if(data.success){
+loadCart();
+}
+
+});
+
+}
 
 </script>
 

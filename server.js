@@ -479,7 +479,6 @@ address:address[0]
 });
 
 /* GET CART */
-
 app.get("/api/cart/:email",(req,res)=>{
 
 const email = req.params.email;
@@ -491,29 +490,30 @@ db.query(
 
 if(err){
 console.log(err);
-return res.json({success:false});
+return res.json({
+cart:[],
+total:0
+});
 }
 
 if(user.length === 0){
-return res.json({success:false});
+return res.json({
+cart:[],
+total:0
+});
 }
 
 const userId = user[0].id;
 
 db.query(
-`SELECT id,total FROM cart WHERE user_id=?`,
+`SELECT * FROM cart WHERE user_id=?`,
 [userId],
 (err,cart)=>{
 
-if(err){
-console.log(err);
-return res.json({success:false});
-}
-
-if(cart.length === 0){
+if(err || cart.length === 0){
 return res.json({
-success:true,
-cart:[]
+cart:[],
+total:0
 });
 }
 
@@ -529,7 +529,8 @@ products.price,
 products.cover_image
 FROM cart_items
 JOIN products
-ON cart_items.product_id = products.id
+ON cart_items.product_id =
+products.id
 WHERE cart_items.cart_id=?
 `,
 [cartId],
@@ -537,13 +538,23 @@ WHERE cart_items.cart_id=?
 
 if(err){
 console.log(err);
-return res.json({success:false});
+return res.json({
+cart:[],
+total:0
+});
 }
 
+let total = 0;
+
+items.forEach(item=>{
+total +=
+item.price *
+item.quantity;
+});
+
 res.json({
-success:true,
 cart:items,
-total:cart[0].total
+total:total
 });
 
 });
@@ -1159,6 +1170,191 @@ error:err.message
 
 res.json({
 success:true
+});
+
+});
+
+});
+
+/* UPDATE CART QTY */
+
+app.post("/api/update-cart",(req,res)=>{
+
+const {itemId,change} = req.body;
+
+db.query(
+`
+SELECT
+cart_items.quantity,
+products.price,
+cart_items.cart_id
+FROM cart_items
+JOIN products
+ON cart_items.product_id =
+products.id
+WHERE cart_items.id=?
+`,
+[itemId],
+(err,result)=>{
+
+if(err || result.length === 0){
+return res.json({success:false});
+}
+
+const item = result[0];
+
+const newQty =
+item.quantity + change;
+
+if(newQty <= 0){
+return res.json({success:false});
+}
+
+db.query(
+`UPDATE cart_items
+SET quantity=?
+WHERE id=?`,
+[newQty,itemId],
+(err)=>{
+
+if(err){
+return res.json({success:false});
+}
+
+db.query(
+`
+SELECT
+SUM(cart_items.quantity * products.price)
+AS total
+FROM cart_items
+JOIN products
+ON cart_items.product_id =
+products.id
+WHERE cart_items.cart_id=?
+`,
+[item.cart_id],
+(err,totalResult)=>{
+
+if(err){
+return res.json({success:false});
+}
+
+const newTotal =
+totalResult[0].total || 0;
+
+db.query(
+`
+UPDATE cart
+SET total=?
+WHERE id=?
+`,
+[newTotal,item.cart_id],
+(err)=>{
+
+if(err){
+return res.json({success:false});
+}
+
+res.json({
+success:true
+});
+
+});
+
+});
+
+});
+
+});
+
+});
+
+
+/* DELETE CART ITEM */
+
+app.post("/api/remove-cart-item",(req,res)=>{
+
+const {itemId} = req.body;
+
+db.query(
+`
+SELECT
+cart_items.quantity,
+products.price,
+cart_items.cart_id
+FROM cart_items
+JOIN products
+ON cart_items.product_id =
+products.id
+WHERE cart_items.id=?
+`,
+[itemId],
+(err,result)=>{
+
+if(err || result.length === 0){
+return res.json({success:false});
+}
+
+const item = result[0];
+
+const deduction =
+item.quantity *
+item.price;
+
+db.query(
+`
+DELETE FROM cart_items
+WHERE id=?
+`,
+[itemId],
+(err)=>{
+
+if(err){
+return res.json({success:false});
+}
+
+db.query(
+`
+SELECT
+SUM(cart_items.quantity * products.price)
+AS total
+FROM cart_items
+JOIN products
+ON cart_items.product_id =
+products.id
+WHERE cart_items.cart_id=?
+`,
+[item.cart_id],
+(err,totalResult)=>{
+
+if(err){
+return res.json({success:false});
+}
+
+const newTotal =
+totalResult[0].total || 0;
+
+db.query(
+`
+UPDATE cart
+SET total=?
+WHERE id=?
+`,
+[newTotal,item.cart_id],
+(err)=>{
+
+if(err){
+return res.json({success:false});
+}
+
+res.json({
+success:true
+});
+
+});
+
+});
+
 });
 
 });
