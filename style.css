@@ -3402,10 +3402,10 @@ transform:translateX(-50%);
   }
 
   /* hide desktop nav */
-  .navbar ul,
+  .navbar ul:not(.nav-menu),
   .nav-icons{
-    display:none !important;
-  }
+  display:none !important;
+}
 
   .logo{
     font-size:24px;
@@ -3414,12 +3414,16 @@ transform:translateX(-50%);
 
   /* show hamburger */
   .mobile-menu-btn{
-    display:block !important;
-    font-size:38px;
-    cursor:pointer;
-    color:#111;
-    z-index:99999;
-  }
+  display:block !important;
+  font-size:38px;
+  cursor:pointer;
+  color:#111;
+  z-index:99999;
+
+  position:absolute;
+  right:25px;
+  top:18px;
+}
 
   /* cloudzest popup menu */
   .nav-menu{
