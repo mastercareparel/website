@@ -40,13 +40,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <link rel="stylesheet" href="style.css">
 
 </head>
-<script>
-function toggleMenu() {
-  document
-    .querySelector(".nav-menu")
-    .classList.toggle("active");
-}
-</script>
+
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPWDCWKL"
@@ -56,21 +50,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar">
 
   <div class="logo">MASTERCARE</div>
-  <div class="mobile-menu-btn"
-    onclick="toggleMenu()">
-    ☰
-  </div>
-
-  <ul>
-    <li><a href="index.html" >Home</a></li>
+    <div class="mobile-menu-btn" onclick="toggleMenu()">
+       ☰
+    </div>
+  <ul class="nav-menu">
+    <li><a href="index.html" class="active">Home</a></li>
     <li><a href="services.html">Services</a></li>
-    <li><a href="About.html"  class="active">About</a></li>
+    <li><a href="About.html">About</a></li>
     <li><a href="contact.html">Contact us</a></li>
     <li><a href="pickup-drop.html">Pick & Drop</a></li>
     <li><a href="accessory.html">Accessory</a></li>
+
   </ul>
-
-
+  
 </nav>
 <section class="about-hero-new">
 
@@ -445,5 +437,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </footer>
 <script src="main.js"></script>
+<script>
+function toggleMenu() {
+  document
+    .querySelector(".nav-menu")
+    .classList.toggle("active");
+}
+</script>
 </body>
 </html>

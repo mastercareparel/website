@@ -60,26 +60,36 @@ function toggleMenu() {
     .classList.toggle("active");
 }
 </script>
-
 <nav class="navbar">
 
   <div class="logo">MASTERCARE</div>
 
   <div class="mobile-menu-btn"
-    onclick="toggleMenu()">
+  onclick="toggleMenu()">
     ☰
-    </div>
+  </div>
 
-    <ul class="nav-menu">
-    <li><a href="index.html" >Home</a></li>
-    <li><a href="services.html"  class="active">Services</a></li>
+  <ul class="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
     <li><a href="About.html">About</a></li>
-    <li><a href="contact.html">Contact us</a></li>
-    <li><a href="pickup-drop.html">Pick & Drop</a></li>
-    <li><a href="accessory.html">Accessory</a></li>
+    <li><a href="contact.html"
+    class="active">Contact us</a></li>
+    <li><a href="pickup-drop.html">
+    Pick & Drop</a></li>
+    <li><a href="accessory.html">
+    Accessory</a></li>
   </ul>
-</nav>
 
+  <div class="nav-icons">
+    <a href="cart.html"
+    class="cart-icon">
+      🛒
+      <span class="cart-count">0</span>
+    </a>
+  </div>
+
+</nav>
 <section class="service-hero">
 
   <div class="service-hero-content">
