@@ -743,100 +743,43 @@ color:black;
   display:none;
 }
 
-@media(max-width:768px){
+@media(max-width:600px){
 
-  .navbar{
-    padding:18px 20px !important;
-    display:flex;
-    flex-direction:column;
-    background:#fff;
-    gap:16px;
+  /* SHOP BY CATEGORY ONLY */
+  .categories{
+    padding:20px 16px !important;
+    overflow:hidden;
   }
 
-  /* top row */
-  .navbar-top{
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+  .categories h2{
+    font-size:28px;
+    margin-bottom:18px;
   }
 
-  .logo{
-    font-size:24px;
-    font-weight:800;
-  }
-
-  /* desktop menu hide */
-  .navbar ul{
-    display:none !important;
-  }
-
-  /* hamburger show */
-  .mobile-menu-btn{
-    display:block !important;
-    font-size:42px;
-    cursor:pointer;
-  }
-
-  /* popup menu */
-  .nav-menu{
-    display:none;
-    width:100%;
-    background:#fff;
-    border-radius:28px;
-    padding:30px;
-    box-shadow:0 10px 35px rgba(0,0,0,.08);
-    flex-direction:column;
-    gap:20px;
-  }
-
-  .nav-menu.active{
+  .category-grid{
     display:flex !important;
-  }
-
-  .nav-menu li{
-    list-style:none;
-  }
-
-  .nav-menu li a{
-    text-decoration:none;
-    color:#111;
-    font-size:22px;
-    font-weight:600;
-  }
-
-  /* search + cart row */
-  .nav-icons{
-    display:flex !important;
-    width:100%;
-    align-items:center;
+    overflow-x:auto;
     gap:14px;
+    padding-bottom:10px;
+    scroll-behavior:smooth;
   }
 
-  .nav-search{
-    flex:1;
+  .category-grid::-webkit-scrollbar{
+    display:none;
   }
 
-  .nav-search input{
-    width:100%;
-    height:58px;
-    border-radius:35px;
-    padding:0 22px;
-    font-size:17px;
+  .category-card{
+    min-width:140px;
+    flex-shrink:0;
+    border-radius:20px;
+    padding:25px 15px;
   }
 
-  .cart-icon{
-    font-size:28px;
-    color:#111;
-    text-decoration:none;
+  .category-card h3{
+    font-size:18px;
   }
 
-  .orders-icon{
-    display:flex !important;
-    font-size:28px;
-  }
-
-  body{
-    padding-top:150px;
+  .category-card p{
+    font-size:14px;
   }
 }
