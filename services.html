@@ -52,15 +52,25 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPWDCWKL"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+<script>
+function toggleMenu() {
+  document
+    .querySelector(".nav-menu")
+    .classList.toggle("active");
+}
+</script>
+
 <nav class="navbar">
 
   <div class="logo">MASTERCARE</div>
 
-  <div class="mobile-menu-btn">
-  ☰
-  </div>
+  <div class="mobile-menu-btn"
+    onclick="toggleMenu()">
+    ☰
+    </div>
 
-  <ul>
+    <ul class="nav-menu">
     <li><a href="index.html" >Home</a></li>
     <li><a href="services.html"  class="active">Services</a></li>
     <li><a href="About.html">About</a></li>
