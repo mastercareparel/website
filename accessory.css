@@ -383,10 +383,6 @@ grid-template-columns:1fr;
   font-size:14px;
 }
 
-
-
-/* ACCESSORY MOBILE NAVBAR */
-
 @media(max-width:768px){
 
   .navbar{
@@ -400,6 +396,11 @@ grid-template-columns:1fr;
   .logo{
     font-size:24px;
     font-weight:800;
+  }
+
+  /* hide menu icon */
+  .mobile-menu-btn{
+    display:none !important;
   }
 
   .navbar ul{
@@ -438,12 +439,12 @@ grid-template-columns:1fr;
 
   .cart-icon{
     font-size:22px;
-    white-space:nowrap;
     text-decoration:none;
     color:black;
+    white-space:nowrap;
   }
 
-  /* hide box only on mobile */
+  /* phone me box hide */
   .orders-icon{
     display:none;
   }
@@ -452,8 +453,6 @@ grid-template-columns:1fr;
     padding-top:180px;
   }
 }
-
-
 
 @media(max-width:500px){
 
