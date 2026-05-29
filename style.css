@@ -1283,7 +1283,7 @@ grid-template-columns:1fr;
   }
 
   .navbar ul{
-    display:none;
+    display:flex;
   }
 
   .search-box{
@@ -3387,42 +3387,41 @@ transform:translateX(-50%);
   display:none;
 }
 
-@media (max-width:768px){
+@media(max-width:768px){
 
-    .navbar{
-        padding:18px 20px;
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        position:fixed;
-        width:100%;
-    }
+  .navbar{
+    padding:18px 20px;
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fff;
+    z-index:9999;
+  }
 
-    .mobile-menu-btn{
-        display:block !important;
-        font-size:38px;
-        font-weight:400;
-        cursor:pointer;
-        color:#111;
+  /* hide desktop nav */
+  .navbar ul,
+  .nav-icons{
+    display:none !important;
+  }
 
-        position:absolute;
-        right:20px;
-        top:18px;
-
-        z-index:99999;
-    }
   .logo{
     font-size:24px;
+    font-weight:800;
   }
 
-  /* hamburger */
+  /* show hamburger */
   .mobile-menu-btn{
-    display:block;
-    font-size:34px;
+    display:block !important;
+    font-size:38px;
     cursor:pointer;
-    z-index:1001;
+    color:#111;
+    z-index:99999;
   }
 
+  /* cloudzest popup menu */
   .nav-menu{
     position:fixed;
     top:90px;
@@ -3434,16 +3433,16 @@ transform:translateX(-50%);
     border-radius:35px;
     padding:35px 30px;
 
-    box-shadow:0 15px 40px rgba(0,0,0,0.10);
+    box-shadow:0 15px 45px rgba(0,0,0,.08);
 
-    display:none;
+    display:none !important;
     flex-direction:column;
-    gap:38px;
+    gap:36px;
 
-    z-index:1000;
-    }
-  
-    .nav-menu.active{
+    z-index:10000;
+  }
+
+  .nav-menu.active{
     display:flex !important;
   }
 
@@ -3452,31 +3451,13 @@ transform:translateX(-50%);
   }
 
   .nav-menu li a{
-    font-size:22px;
-    font-weight:600;
-    color:#111;
     text-decoration:none;
-  }
-
-  .nav-icons{
-    display:none;
-  }
-
-  /* accessory search */
-  .nav-search{
-    width:100%;
-    margin-top:10px;
-  }
-
-  .nav-search input{
-    width:100%;
-    padding:14px 18px;
-    border-radius:30px;
-    border:1px solid #ddd;
+    font-size:22px;
+    font-weight:700;
+    color:#1f2937;
   }
 
   .hero-section{
     padding-top:120px;
   }
 }
-
