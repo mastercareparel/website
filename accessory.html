@@ -38,41 +38,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <nav class="navbar">
 
-<div class="logo">MASTERCARE</div>
+  <div class="logo">MASTERCARE</div>
 
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="About.html">About</a></li>
-<li><a href="contact.html">Contact us</a></li>
-<li><a href="pickup-drop.html">Pick & Drop</a></li>
-<li><a href="accessory.html" class="active">Accessory</a></li>
-</ul>
+  <!-- mobile menu button -->
+  <div class="mobile-menu-btn"
+    onclick="toggleMenu()">
+    ☰
+  </div>
 
-<div class="nav-icons">
+  <!-- nav menu -->
+  <ul class="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="contact.html">Contact us</a></li>
+    <li><a href="pickup-drop.html">Pick & Drop</a></li>
+    <li><a href="accessory.html" class="active">Accessory</a></li>
+  </ul>
 
-<div class="nav-search">
-<input
-type="text"
-id="searchInput"
-placeholder="Search accessories..."
-onkeyup="searchProducts()">
-</div>
+  <!-- desktop icons -->
+  <div class="nav-icons">
 
-<a href="cart.html" class="cart-icon">
-🛒 <span id="cart-count">0</span>
-</a>
+    <div class="nav-search">
+      <input
+      type="text"
+      id="searchInput"
+      placeholder="Search accessories..."
+      onkeyup="searchProducts()">
+    </div>
 
-</div>
-<div class="orders-icon"
-onclick="window.location.href='my-orders.html'">
+    <a href="cart.html" class="cart-icon">
+      🛒 <span id="cart-count">0</span>
+    </a>
 
-📦
+    <div class="orders-icon"
+    onclick="window.location.href='my-orders.html'">
+      📦
+    </div>
 
-</div>
+  </div>
 
 </nav>
-
 
 <section class="hero">
 
@@ -403,6 +409,12 @@ product.style.display="none";
 
 });
 
+}
+
+function toggleMenu() {
+  document
+    .querySelector(".nav-menu")
+    .classList.toggle("active");
 }
 
 </script>
