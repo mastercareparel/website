@@ -550,37 +550,43 @@ color:black;
   width:420px;
 }
 
-@media(max-width:600px){
 
+
+.footer {
+    background: #000;
+    color: white;
+    padding: 60px 8%;
+}
+
+.footer-container {@media(max-width:600px){
+
+  /* CATEGORY SECTION */
   .categories{
-    padding:20px 16px !important;
+    padding:20px 18px !important;
   }
 
   .categories h2{
-    font-size:42px;
-    margin-bottom:18px;
+    font-size:28px !important;
+    margin-bottom:20px;
     text-align:left;
   }
 
-  /* horizontal category scroll */
+  /* 2 cards in one row */
   .category-grid{
-    display:flex !important;
-    overflow-x:auto;
-    gap:14px;
-    padding:10px 0;
-  }
-
-  .category-grid::-webkit-scrollbar{
-    display:none;
+    display:grid !important;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px !important;
+    overflow:visible !important;
   }
 
   .category-card{
-    min-width:150px !important;
-    max-width:150px !important;
-    height:130px;
-    flex-shrink:0;
-    border-radius:24px;
-    padding:22px 15px !important;
+    width:100% !important;
+    min-width:unset !important;
+    max-width:unset !important;
+    height:120px !important;
+
+    border-radius:22px;
+    padding:20px 12px !important;
 
     display:flex;
     justify-content:center;
@@ -589,37 +595,38 @@ color:black;
   }
 
   .category-card h3{
-    font-size:16px !important;
+    font-size:18px !important;
     line-height:1.2;
+    margin-bottom:4px;
   }
 
   .category-card p{
     font-size:14px !important;
   }
 
-  /* products */
+  /* PRODUCTS */
   .product-grid{
     grid-template-columns:1fr !important;
-    gap:22px !important;
+    gap:18px !important;
   }
 
   .product-card{
-    padding:22px !important;
-    border-radius:22px !important;
+    padding:18px !important;
+    border-radius:24px !important;
   }
 
   .product-card img{
-    height:240px !important;
+    height:220px !important;
     object-fit:contain !important;
   }
 
   .product-card h3{
-    font-size:22px !important;
-    line-height:1.5 !important;
+    font-size:20px !important;
+    line-height:1.4 !important;
   }
 
   .price{
-    font-size:22px !important;
+    font-size:20px !important;
   }
 
   .product-card button{
@@ -628,27 +635,14 @@ color:black;
     font-size:16px !important;
   }
 
-  /* navbar */
-  .navbar{
-    padding:14px 18px !important;
-  }
-
-  .logo{
-    font-size:22px !important;
-  }
-
-  .search-box{
-    width:100% !important;
+  /* SEARCH */
+  .nav-search input{
+    width:100%;
+    height:54px;
+    border-radius:35px;
+    font-size:16px;
   }
 }
-
-.footer {
-    background: #000;
-    color: white;
-    padding: 60px 8%;
-}
-
-.footer-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 50px;
