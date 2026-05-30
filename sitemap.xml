@@ -30,5 +30,116 @@
     <loc>https://mastercareservices.in/pickup-drop.html</loc>
     <priority>0.9</priority>
   </url>
+    <!-- Product Pages -->
+
+  <url>
+    <loc>https://mastercareservices.in/product.html?product=samsung-type-c-to-c-cable-1m-white</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mastercareservices.in/product.html?product=samsung-usb-c-to-usb-c-5a-cable-1-8m-black</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mastercareservices.in/product.html?product=samsung-usb-c-to-usb-c-5a-cable-1-8m-white</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mastercareservices.in/product.html?product=samsung-usb-c-to-usb-c-cable-1m-black</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mastercareservices.in/product.html?product=samsung-45w-power-adapter</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mastercareservices.in/product.html?product=samsung-35w-pd-adapter-duo</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mastercareservices.in/product.html?product=samsung-65w-travel-adapter</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mastercareservices.in/product.html?product=samsung-25w-super-fast-charging-adapter-black</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mastercareservices.in/product.html?product=samsung-25w-super-fast-charging-adapter-white</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mastercareservices.in/product.html?product=samsung-15w-travel-adapter-white</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mastercareservices.in/product.html?product=samsung-15w-pd-usb-c-adapter</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mastercareservices.in/product.html?product=samsung-10000mah-25w-power-bank</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mastercareservices.in/product.html?product=samsung-15w-adapter-micro-usb</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mastercareservices.in/product.html?product=samsung-45w-super-fast-charging-adapter</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mastercareservices.in/product.html?product=samsung-15w-fast-charging-adapter</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mastercareservices.in/product.html?product=samsung-hs1303-earphones-blue</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mastercareservices.in/product.html?product=samsung-hs1303-earphones-black</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mastercareservices.in/product.html?product=samsung-hs1303-earphones-green</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mastercareservices.in/product.html?product=samsung-hs1303-earphones-pink</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mastercareservices.in/product.html?product=samsung-hs64-wired-earphones</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mastercareservices.in/product.html?product=samsung-type-c-earphones-white</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mastercareservices.in/product.html?product=samsung-type-c-earphones-black</loc>
+    <priority>0.8</priority>
+  </url>
 
 </urlset>
